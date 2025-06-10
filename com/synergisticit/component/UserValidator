@@ -1,0 +1,14 @@
+@Override
+public void validate(Object target, Errors errors) {
+    User user = (User) target;
+    
+    // 只保留业务逻辑校验（比如用户名重复性检查）
+    // 移除所有基础字段校验（非空、长度等）
+    
+    // 示例：唯一性检查（需要注入service）
+    // if(userService.existsByUsername(user.getUsername())) {
+    //     errors.rejectValue("username", "username.duplicate", "Username already exists");
+    // }
+    
+    // ... 其他业务逻辑校验 ...
+} 
